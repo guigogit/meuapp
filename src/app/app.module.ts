@@ -24,7 +24,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
 @NgModule({
   declarations: [
-
+    AppComponent
   ],
   imports: [
     MatToolbarModule,
@@ -52,6 +52,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
     provideAnimationsAsync()
   ],
+  bootstrap: []
+
 
 
 })
