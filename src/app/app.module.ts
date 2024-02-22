@@ -20,43 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
-@NgModule({
-  declarations: [
-    AppComponent,
 
-  ],
-  imports: [
-    MatToolbarModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    FormsModule,
-    ReactiveFormsModule,
-    FlexLayoutModule,
-    HttpClientModule,
-    MatSlideToggleModule,
-    MatButtonModule,
-    MatInputModule,
-    MatSelectModule,
-    MatIconModule,
-    MatCardModule,
-    MatDividerModule,
-    MatDialogModule,
-    MatChipsModule,
-    MatBadgeModule,
-
-
-  ],
-  providers: [
-
-
-    provideAnimationsAsync()
-  ],
-  bootstrap: []
-
-
-
-})
-export class AppModule { }
 
 @Pipe({
   name: 'search',
