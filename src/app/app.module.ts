@@ -15,12 +15,6 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatBadgeModule} from '@angular/material/badge';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { Pipe, PipeTransform } from '@angular/core';
-import {bootstrapApplication} from '@angular/platform-browser';
-
-
-
-
-
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
@@ -57,7 +51,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
     provideAnimationsAsync()
   ],
-  bootstrap: [AppComponent]
+  bootstrap: []
 
 
 
