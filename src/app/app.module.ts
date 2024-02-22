@@ -14,6 +14,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatBadgeModule} from '@angular/material/badge';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { Pipe, PipeTransform } from '@angular/core';
+import {bootstrapApplication} from '@angular/platform-browser';
+
+
 
 
 
@@ -24,7 +28,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+
   ],
   imports: [
     MatToolbarModule,
@@ -52,10 +57,20 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 
     provideAnimationsAsync()
   ],
-  bootstrap: []
+  bootstrap: [AppComponent]
 
 
 
 })
 export class AppModule { }
 
+@Pipe({
+  name: 'search',
+  standalone: true
+})
+export class SearchPipe implements PipeTransform {
+
+  transform(value: unknown, ...args: unknown[]): unknown {
+    return null;
+  }
+}
