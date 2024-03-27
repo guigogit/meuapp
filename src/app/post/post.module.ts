@@ -1,6 +1,6 @@
 // post.module.ts
 import { NgModule } from '@angular/core';
-import { Post } from '../post'; // Importe a classe Post do arquivo correto
+//mport { Post } from '../post'; // Importe a classe Post do arquivo correto
 
 @NgModule({
   declarations: [], // Adicione Post na lista de declarações
