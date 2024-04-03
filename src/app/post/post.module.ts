@@ -1,10 +1,12 @@
 // post.module.ts
 import { NgModule } from '@angular/core';
-//mport { Post } from '../post'; // Importe a classe Post do arquivo correto
+import { MatCardModule } from '@angular/material/card';
+import { PostComponent } from '../post/post.component';
 
 @NgModule({
-  declarations: [], // Adicione Post na lista de declarações
-  exports: [] // Se precisar exportar o componente Post
+  declarations: [PostComponent],
+  imports: [MatCardModule], // Adicione Post na lista de declarações
+  exports: [PostComponent] // Se precisar exportar o componente Post
 })
 export class PostModule { }
 

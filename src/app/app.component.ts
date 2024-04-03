@@ -21,7 +21,7 @@ import { PostModule } from './post/post.module';
 
 })
 export class AppComponent {
-  title = 'meuapp';
+  title = 'app';
 }
 
 

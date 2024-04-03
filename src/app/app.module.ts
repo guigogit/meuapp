@@ -18,13 +18,14 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { PostComponent } from './post/post.component';
-import { PostModule } from './post/post.module'; // Import PostModule (if Post is a component in a separate module)
+//import { PostModule } from './post/post.module'; // Import PostModule (if Post is a component in a separate module)
+
 
 
 @NgModule({
   declarations: [
 
-    //PostComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -44,11 +45,15 @@ import { PostModule } from './post/post.module'; // Import PostModule (if Post i
     MatChipsModule,
     MatBadgeModule,
     MatSlideToggleModule,
-    PostModule // Import PostModule (if Post is a component in a separate module)
+
+    //PostComponent,
+    AppComponent,
+
+    //PostComponent
   ],
   providers: [
     //PostService
   ],
   bootstrap: []
 })
-export class AppModule { }
+export class AppModule  { }
