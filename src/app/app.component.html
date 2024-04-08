@@ -1,11 +1,17 @@
+
 <mat-toolbar color="primary">
   <span>Projeto:Laravel + Angular ////// Teste Rodrigo Fialho de Oliveira</span>
 </mat-toolbar>
 
 <mat-divider></mat-divider>
-<app-post></app-post>
+<!--Abaixo tem a sintaxe para criar um FOR em Type script *ngFor="let p of posts" -->
 
-<app-post></app-post>
+<ng-container *ngFor="let p of posts">
+  <app-post [post]="p"></app-post>
+</ng-container>
+
+
+
 
 
 

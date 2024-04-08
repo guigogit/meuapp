@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { PostComponent } from '../post/post.component';
 
+
+
 @NgModule({
   declarations: [PostComponent],
   imports: [MatCardModule], // Adicione Post na lista de declarações

@@ -18,7 +18,9 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { PostComponent } from './post/post.component';
-//import { PostModule } from './post/post.module'; // Import PostModule (if Post is a component in a separate module)
+import { PostModule } from './post/post.module'; // Import PostModule (if Post is a component in a separate module)
+import { CommonModule } from '@angular/common';
+
 
 
 
@@ -46,9 +48,10 @@ import { PostComponent } from './post/post.component';
     MatBadgeModule,
     MatSlideToggleModule,
 
-    //PostComponent,
+    
     AppComponent,
-
+    CommonModule,
+    PostModule
     //PostComponent
   ],
   providers: [
