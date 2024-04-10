@@ -30,5 +30,3 @@ export class AppComponent {
     new Post("maria", "Post da Maria", "Sub Maria", "Maria@gmail.com","MSG da Maria"),
   ];
 }
-
-
