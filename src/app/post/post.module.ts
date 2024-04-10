@@ -1,4 +1,3 @@
-// post.module.ts
 import { NgModule } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { PostComponent } from '../post/post.component';
@@ -11,4 +10,3 @@ import { PostComponent } from '../post/post.component';
   exports: [PostComponent] // Se precisar exportar o componente Post
 })
 export class PostModule { }
-

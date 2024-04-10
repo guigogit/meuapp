@@ -6,7 +6,7 @@ import { MatCardSubtitle } from '@angular/material/card';
 import { MatCardContent } from '@angular/material/card';
 import { MatCardActions } from '@angular/material/card';
 import { MatCardModule } from '@angular/material/card'; // Importe o módulo MatCardModule
-import { Post } from '../post'; 
+import { Post } from '../post';
 
 
 
@@ -25,4 +25,3 @@ export class PostComponent  implements OnInit {
   }
 
 }
-

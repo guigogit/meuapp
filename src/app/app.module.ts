@@ -47,12 +47,10 @@ import { CommonModule } from '@angular/common';
     MatChipsModule,
     MatBadgeModule,
     MatSlideToggleModule,
-
-    
     AppComponent,
     CommonModule,
-    PostModule
-    //PostComponent
+    PostModule,
+//    PostComponent,
   ],
   providers: [
     //PostService
