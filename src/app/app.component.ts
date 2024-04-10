@@ -7,7 +7,7 @@ import { MatCard } from '@angular/material/card';
 import { MatCardHeader } from '@angular/material/card';
 import { PostModule } from './post/post.module';
 import { Post } from './post';
-
+import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -15,18 +15,18 @@ import { Post } from './post';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     standalone: true,
-    imports: [MatToolbar, MatButton,MatDivider,MatIcon,MatCard,MatCardHeader,PostModule],
+    imports: [MatToolbar, MatButton,MatDivider,MatIcon,MatCard,MatCardHeader,PostModule,CommonModule,],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
 
 })
 export class AppComponent {
   title = 'app';
-  private posts: Post[] = [
-    new Post("João", "Meu post", "Sub João", "joao@gmail.com","Minha MSG"),
+  public posts: Post[] = [
+    new Post("João", "Meu post", "Sub Meu", "joao@gmail.com","Minha MSG"),
     new Post("Paulo", "Post do Paulo", "Sub Paulo", "paulo@gmail.com","MSG do Paulo"),
     new Post("maria", "Post da Maria", "Sub Maria", "Maria@gmail.com","MSG da Maria"),
-    new Post("Paulo", "Post do Paulo", "Sub Paulo", "paulo@gmail.com","MSG do Paulo"),
-    new Post("maria", "Post da Maria", "Sub Maria", "Maria@gmail.com","MSG da Maria"),
+    new Post("Paulo", "Post do Rodrigo", "Sub Rodrigo", "Rodrigo@gmail.com","MSG do Rodrigo"),
+    new Post("maria", "Post da Mirly", "Sub Mirly", "Mirly@gmail.com","MSG da Mirly"),
   ];
 }

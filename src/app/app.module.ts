@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from "@angular/flex-layout";
@@ -14,12 +14,12 @@ import { MatToolbarModule } from '@angular/material/toolbar'; //mat-divider
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-//import { AppComponent } from './app.component';
+import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { PostComponent } from './post/post.component';
 import { PostModule } from './post/post.module'; // Import PostModule (if Post is a component in a separate module)
-import { CommonModule } from '@angular/common';
+//import { CommonModule } from '@angular/common';
 import { MatCardHeader } from '@angular/material/card';
 
 
@@ -51,11 +51,10 @@ import { MatCardHeader } from '@angular/material/card';
     MatChipsModule,
     MatBadgeModule,
     MatSlideToggleModule,
-    CommonModule,
+  //  CommonModule,
     PostModule
   ],
   providers: [],
-  bootstrap: [],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  bootstrap: []
 })
 export class AppModule  { }
