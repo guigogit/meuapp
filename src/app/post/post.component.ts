@@ -15,7 +15,7 @@ import { Post } from '../post';
 
 })
 export class PostComponent  implements OnInit {
-  @Input() post: Post;
+  @Input() post: any; // Defina a entrada 'post' para receber dados
   constructor() {}
   ngOnInit() {
 
