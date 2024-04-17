@@ -1,31 +1,24 @@
-<div fxLayout="column" fxLayoutAlign="space-around start" >
-  <div fxlayout ="row" fxlayoutAlign="space-between">
+<div fxLayout="column" fxLayoutAlign="space-around start">
+  <div fxLayout="row" fxLayoutAlign="space-between">
     <mat-form-field fxFlex="50">
-      <input matInput placeholder="Seu nome">
-      <mat-hint>Digiti aqui seu nome</mat-hint>
-
+      <input matInput placeholder="Seu nome" [(ngModel)]="nome">
+      <mat-hint>Digite aqui seu nome</mat-hint>
     </mat-form-field>
     <mat-form-field fxFlex="10">
-      <input matInput placeholder="Seu E-mail">
-      <mat-hint>Digiti aqui seu E-mail</mat-hint>
-
+      <input matInput placeholder="Seu E-mail" [(ngModel)]="email">
+      <mat-hint>Digite aqui seu E-mail</mat-hint>
     </mat-form-field>
-
   </div>
 
-  <div fxlayout ="row" fxlayoutAlign="space-between">
+  <div fxLayout="row" fxLayoutAlign="space-between">
     <mat-form-field fxFlex="50">
-      <input matInput placeholder="Titulo">
-
-
+      <input matInput placeholder="Titulo" [(ngModel)]="titulo">
     </mat-form-field>
     <mat-form-field fxFlex="10">
-      <input matInput placeholder="Subtitulo da mensagem">
-
-
+      <input matInput placeholder="Subtitulo da mensagem" [(ngModel)]="subtitulo">
     </mat-form-field>
-
   </div>
-
-
+  <mat-form-field>
+    <textarea matInput placeholder="Deixe aqui sua mensagem" [(ngModel)]="mensagem"></textarea>
+  </mat-form-field>
 </div>
