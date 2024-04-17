@@ -22,4 +22,3 @@ export class PostComponent  implements OnInit {
   }
 
 }
-

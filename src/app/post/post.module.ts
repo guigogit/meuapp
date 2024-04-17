@@ -10,3 +10,4 @@ import { PostComponent } from '../post/post.component';
   exports: [PostComponent] // Se precisar exportar o componente Post
 })
 export class PostModule { }
+
