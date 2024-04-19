@@ -1,8 +1,9 @@
 .float-button{
-position: fixed;
-bottom: 40px;
-right: 40px;
-}
-mat-card img {
-  width: 300px;
-}
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  }
+  mat-card img {
+    width: 300px;
+  }
+

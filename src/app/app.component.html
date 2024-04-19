@@ -9,14 +9,15 @@
 <!--Abaixo tem a sintaxe para criar um FOR em Type script *ngFor="let p of posts" -->
 
 
-<div fxLayout="row wrap" fxLayoutAlign="space-around stretch">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
   <ng-container *ngFor="let p of posts">
-    <app-post [post]="p" class="flex-item"></app-post> </ng-container>
-
-
+    <app-post [post]="p"></app-post>
+  </ng-container>
 </div>
 
 
-<button mat-fab color="primary" class="float-button">
+
+<button float-button color="primary" class="float-button">
   <mat-icon>add</mat-icon>
 </button>
+
