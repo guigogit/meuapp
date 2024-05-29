@@ -8,14 +8,14 @@ import { MatCardHeader } from '@angular/material/card';
 import { PostModule } from './post/post.module';
 import { Post } from './post';
 import { CommonModule } from '@angular/common';
-
+import {DialogModule} from '@angular/cdk/dialog';
 
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],
     standalone: true,
-    imports: [MatToolbar, MatButton,MatDivider,MatIcon,MatCard,MatCardHeader,PostModule,CommonModule,],
+    imports: [MatToolbar, MatButton,MatDivider,MatIcon,MatCard,MatCardHeader,PostModule,CommonModule,DialogModule],
     schemas: [CUSTOM_ELEMENTS_SCHEMA]
 
 

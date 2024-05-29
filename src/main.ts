@@ -31,7 +31,7 @@ bootstrapApplication(AppComponent, {
         importProvidersFrom(MatToolbarModule, BrowserModule, FormsModule, ReactiveFormsModule, FlexLayoutModule, MatSlideToggleModule, MatButtonModule, MatInputModule, MatSelectModule, MatIconModule, MatCardModule, MatDividerModule, MatDialogModule, MatChipsModule, MatBadgeModule),
         provideAnimationsAsync(),
         provideAnimations(),
-        provideHttpClient(withInterceptorsFromDi())
+        provideHttpClient(withInterceptorsFromDi()), provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync()
     ]
 })
   .catch(err => console.error(err));

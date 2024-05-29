@@ -4,7 +4,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
@@ -15,16 +14,19 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import { PostComponent } from './post/post.component';
 import { PostModule } from './post/post.module'; // Import PostModule (if Post is a component in a separate module)
-//import { CommonModule } from '@angular/common';
 import { MatCardHeader } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { PostDialogComponent } from './post-dialog/post-dialog.component';
+//import {DialogModule} from '@angular/cdk/dialog';
 
 @NgModule({
   declarations: [
     //AppComponent,
     //PostComponent
+    PostDialogComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -33,7 +35,7 @@ import { MatCardHeader } from '@angular/material/card';
     ReactiveFormsModule,
     HttpClientModule,
     MatButtonModule,
-    MatInputModule,
+    MatCardHeader,
     MatSelectModule,
     MatIconModule,
     MatToolbarModule,
@@ -43,7 +45,11 @@ import { MatCardHeader } from '@angular/material/card';
     MatChipsModule,
     MatBadgeModule,
     MatSlideToggleModule,
-  //  CommonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    AppComponent,
+    //DialogModule,
+
     PostModule
   ],
   providers: [],

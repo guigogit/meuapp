@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-//import { MatDialogRef } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
+
+//import { FormsModule } from '@angular/forms';
+//import { MatInputModule } from '@angular/material/input';
+//import { MatFormFieldModule } from '@angular/material/form-field';
 
 
 @Component({
   selector: 'app-post-dialog',
-  standalone: true,
-  imports: [MatFormFieldModule,],
   templateUrl: './post-dialog.component.html',
-  styleUrl: './post-dialog.component.css'
+  styleUrls: ['./post-dialog.component.css'],
 })
 export class PostDialogComponent implements OnInit {
 
@@ -18,9 +18,10 @@ export class PostDialogComponent implements OnInit {
   subtitulo: string = '';
   mensagem: string = '';
 
-  // ... outra lógica de componente (manipulação de envio de formulário, etc.)
+  constructor() { }
 
   ngOnInit() {
     // Inicializar dados do formulário se necessário
   }
+
 }
