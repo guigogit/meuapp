@@ -1,6 +1,7 @@
 import { enableProdMode, importProvidersFrom } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
  // Importe o módulo AppModule
+import { AppModule } from './app/app.module';
 import { environment } from './environment';
 import { AppComponent } from './app/app.component';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -25,6 +26,9 @@ if (environment.production) {
   enableProdMode();
 }
 
+
+
+
 // Use a função bootstrapApplication para inicializar o aplicativo
 bootstrapApplication(AppComponent, {
     providers: [
@@ -34,4 +38,6 @@ bootstrapApplication(AppComponent, {
         provideHttpClient(withInterceptorsFromDi()), provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync()
     ]
 })
+platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+
