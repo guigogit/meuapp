@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --output-path=../../../resources/js/",
+    "build": "ng build --output-path=dist/meuapp",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:meuapp": "node dist/meuapp/server/server.mjs"
@@ -26,6 +26,7 @@
     "@angular/ssr": "^17.2.0",
     "express": "^4.18.2",
     "hammerjs": "^2.0.8",
+    "ipfs": "^0.66.1",
     "rxjs": "~7.8.0",
     "s": "^1.0.0",
     "tslib": "^2.3.0",
