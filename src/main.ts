@@ -1,25 +1,21 @@
 import { enableProdMode, importProvidersFrom } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './app/app.module';
+import { bootstrapApplication } from '@angular/platform-browser';
 import { environment } from './environment/environment';
 import { AppComponent } from './app/app.component';
-import { MatBadgeModule } from '@angular/material/badge';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSelectModule } from '@angular/material/select';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { provideAnimations } from '@angular/platform-browser/animations';
-import { BrowserModule, bootstrapApplication } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
+import { MatCardHeader } from '@angular/material/card';
+import { CommonModule } from '@angular/common';
+import { DialogModule } from '@angular/cdk/dialog';
+import { PostModule } from './app/post/post.module';
+import { AppModule } from './app/app.module';
 
 if (environment.production) {
   enableProdMode();
@@ -28,25 +24,21 @@ if (environment.production) {
 bootstrapApplication(AppComponent, {
   providers: [
     importProvidersFrom(
-      MatToolbarModule,
       BrowserModule,
+      BrowserAnimationsModule,
       FormsModule,
       ReactiveFormsModule,
-      FlexLayoutModule,
-      MatSlideToggleModule,
+      HttpClientModule,
       MatButtonModule,
-      MatInputModule,
-      MatSelectModule,
+      MatToolbarModule,
+      MatDividerModule,
       MatIconModule,
       MatCardModule,
-      MatDividerModule,
-      MatDialogModule,
-      MatChipsModule,
-      MatBadgeModule
-    ),
-    provideAnimationsAsync(),
-    provideAnimations(),
-    provideHttpClient(withInterceptorsFromDi())
+      MatCardHeader,
+      CommonModule,
+      DialogModule,
+      PostModule,
+      AppModule
+    )
   ]
-})
-  .catch(err => console.error(err));
+}).catch(err => console.error(err));
