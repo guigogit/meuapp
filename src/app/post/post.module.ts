@@ -1,13 +1,31 @@
 import { NgModule } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
-import { PostComponent } from '../post/post.component';
-
-
+import { CommonModule } from '@angular/common';
+import { PostDialogComponent } from '../post-dialog/post-dialog.component';
+import { PostComponent } from './post.component'; // Certifique-se de importar PostComponent
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card'; // Importar MatCardModule
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [PostComponent],
-  imports: [MatCardModule], // Adicione Post na lista de declarações
-  exports: [PostComponent] // Se precisar exportar o componente Post
+  declarations: [
+    PostDialogComponent,
+    PostComponent // Declarar PostComponent
+  ],
+  imports: [
+    CommonModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatCardModule, // Importar MatCardModule
+    FormsModule
+  ],
+  exports: [
+    PostDialogComponent,
+    PostComponent // Exportar PostComponent
+  ]
 })
 export class PostModule { }
-

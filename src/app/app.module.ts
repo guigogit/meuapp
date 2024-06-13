@@ -8,26 +8,17 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatChipsModule } from '@angular/material/chips';
-import { MatToolbarModule } from '@angular/material/toolbar'; //mat-divider
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { PostModule } from './post/post.module'; // Import PostModule (if Post is a component in a separate module)
-import { MatCardHeader } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { PostDialogComponent } from './post-dialog/post-dialog.component';
-//import {DialogModule} from '@angular/cdk/dialog';
+
+import { PostModule } from './post/post.module';
 
 @NgModule({
-  declarations: [
-    //AppComponent,
-    //PostComponent
-    PostDialogComponent,
-
-  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -35,11 +26,10 @@ import { PostDialogComponent } from './post-dialog/post-dialog.component';
     ReactiveFormsModule,
     HttpClientModule,
     MatButtonModule,
-    MatCardHeader,
+    MatCardModule,
     MatSelectModule,
     MatIconModule,
     MatToolbarModule,
-    MatCardModule,
     MatDividerModule,
     MatDialogModule,
     MatChipsModule,
@@ -47,13 +37,9 @@ import { PostDialogComponent } from './post-dialog/post-dialog.component';
     MatSlideToggleModule,
     MatInputModule,
     MatFormFieldModule,
-    AppComponent,
-    //DialogModule,
-
-    PostModule
+    PostModule  // Importe o módulo que exporta PostDialogComponent e PostComponent
   ],
   providers: [],
   bootstrap: []
 })
-export class AppModule  { }
-
+export class AppModule { }

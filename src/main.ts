@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 import { DialogModule } from '@angular/cdk/dialog';
 import { PostModule } from './app/post/post.module';
 import { AppModule } from './app/app.module';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 if (environment.production) {
   enableProdMode();

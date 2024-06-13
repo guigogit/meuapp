@@ -1,24 +1,28 @@
 <div style="display: flex; flex-direction: column; align-items: start;">
   <div style="display: flex; justify-content: space-between;">
     <mat-form-field style="flex: 1;">
-      <input matInput placeholder="Seu nome" [(ngModel)]="nome">
+      <input matInput placeholder="Seu nome" [(ngModel)]="data.nome">
       <mat-hint>Digite seu nome</mat-hint>
     </mat-form-field>
     <mat-form-field style="flex: 1;">
-      <input matInput placeholder="Seu E-mail" [(ngModel)]="email">
+      <input matInput placeholder="Seu E-mail" [(ngModel)]="data.email">
       <mat-hint>Digite seu e-mail</mat-hint>
     </mat-form-field>
   </div>
 
   <div style="display: flex; justify-content: space-between;">
     <mat-form-field style="flex: 1;">
-      <input matInput placeholder="Título" [(ngModel)]="titulo">
+      <input matInput placeholder="Título" [(ngModel)]="data.titulo">
     </mat-form-field>
     <mat-form-field style="flex: 1;">
-      <input matInput placeholder="Subtítulo da mensagem" [(ngModel)]="subtitulo">
+      <input matInput placeholder="Subtítulo da mensagem" [(ngModel)]="data.subtitulo">
     </mat-form-field>
   </div>
   <mat-form-field style="flex: 1;">
-    <textarea matInput placeholder="Deixe aqui sua mensagem" [(ngModel)]="mensagem"></textarea>
+    <textarea matInput placeholder="Deixe aqui sua mensagem" [(ngModel)]="data.mensagem"></textarea>
   </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancelar</button>
+  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Enviar</button>
 </div>

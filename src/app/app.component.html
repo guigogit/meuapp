@@ -1,14 +1,13 @@
-
 <mat-toolbar color="primary">
-  <span>Projeto:Laravel + Angular ////// Teste Rodrigo Fialho de Oliveira</span>
+  <span>Projeto: Laravel + Angular ////// Teste Rodrigo Fialho de Oliveira</span>
 </mat-toolbar>
 
 <mat-divider></mat-divider>
-<app-post-dialog></app-post-dialog>
+
+<!-- Remova o app-post-dialog daqui, pois está sendo aberto via diálogo -->
+<!-- <app-post-dialog></app-post-dialog> -->
 
 <!--Abaixo tem a sintaxe para criar um FOR em Type script *ngFor="let p of posts" -->
-
-
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
   <ng-container *ngFor="let p of posts">
     <app-post [post]="p"></app-post>
@@ -21,6 +20,10 @@
 </button>
 -->
 
-<button mat-fab color = "primary" class="float-button">
+<button mat-fab color="primary" (click)="openDialog()" class="float-button">
   <mat-icon> add</mat-icon>
 </button>
+<!--
+  <button mat-button (click)="openDialog()">add</button>
+  <button mat-button (click)="openDialog()">Abrir Diálogo</button>
+-->
