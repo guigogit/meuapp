@@ -1,36 +1,39 @@
 <div style="display: flex; flex-direction: column; align-items: start;">
   <div style="display: flex; justify-content: space-between;">
     <mat-form-field style="flex: 1;">
-      <input matInput placeholder="Seu nome" [(ngModel)]="data.nome">
+      <input matInput placeholder="Seu nome" [(ngModel)]="dados.post.nome">
       <mat-hint>Digite seu nome</mat-hint>
     </mat-form-field>
     <mat-form-field style="flex: 1;">
-      <input matInput placeholder="Seu E-mail" [(ngModel)]="data.email">
+      <input matInput placeholder="Seu E-mail" [(ngModel)]="dados.post.email">
       <mat-hint>Digite seu e-mail</mat-hint>
     </mat-form-field>
   </div>
 
   <div style="display: flex; justify-content: space-between;">
     <mat-form-field style="flex: 1;">
-      <input matInput placeholder="Título" [(ngModel)]="data.titulo">
+      <input matInput placeholder="Título" [(ngModel)]="dados.post.titulo">
     </mat-form-field>
     <mat-form-field style="flex: 1;">
-      <input matInput placeholder="Subtítulo da mensagem" [(ngModel)]="data.subtitulo">
+      <input matInput placeholder="Subtítulo da mensagem" [(ngModel)]="dados.post.subtitulo">
     </mat-form-field>
   </div>
   <mat-form-field style="flex: 1;">
-    <textarea matInput placeholder="Deixe aqui sua mensagem" [(ngModel)]="data.mensagem"></textarea>
+    <textarea matInput placeholder="Deixe aqui sua mensagem" [(ngModel)]="dados.post.mensagem"></textarea>
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
 
-  <input type = "file" style = "display: none;"#fileinput>
+  <input type = "file" style = "display: none;" (change)="mudouarquivo($event)" #fileinput>
   <button mat-stroked-button color = "primary"(click)="fileinput.click()">
     <mat-icon>add a photo</mat-icon>
     Adicionar uma foto
 
   </button>
+  <p *ngIf="nomearquivo!=''"><strong>Arquivo: </strong>{{nomearquivo}}
+<mat-icon color = "primary">done</mat-icon>
+  </p>
 </div>
 <br>
-    <button mat-button [mat-dialog-close]="data"color="primary">Enviar</button>
-    <button mat-button (click)="onNoClick()"color="warn">Cancelar</button>
+    <button mat-button [mat-dialog-close]="dados"color="primary" (click)="salvar()">Enviar</button>
+    <button mat-button (click)="onNoClick()"color="warn" >Cancelar</button>

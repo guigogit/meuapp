@@ -52,8 +52,12 @@ export class AppComponent {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('O diálogo foi fechado');
+      //console.log('O diálogo foi fechado');
       // Processar o resultado aqui, se necessário
+      if (result) {
+        console.log(result);
+      }
+
     });
   }
 }
