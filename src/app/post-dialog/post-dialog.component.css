@@ -1,0 +1,4 @@
+textarea {
+  width: 100%;  /* Ajusta a largura para preencher o contêiner */
+  height: 200px; /* Define a altura desejada */
+}

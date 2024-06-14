@@ -23,6 +23,14 @@
   </mat-form-field>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">Cancelar</button>
-  <button mat-button [mat-dialog-close]="data" cdkFocusInitial>Enviar</button>
+
+  <input type = "file" style = "display: none;"#fileinput>
+  <button mat-stroked-button color = "primary"(click)="fileinput.click()">
+    <mat-icon>add a photo</mat-icon>
+    Adicionar uma foto
+
+  </button>
 </div>
+<br>
+    <button mat-button [mat-dialog-close]="data"color="primary">Enviar</button>
+    <button mat-button (click)="onNoClick()"color="warn">Cancelar</button>

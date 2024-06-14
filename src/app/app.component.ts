@@ -47,7 +47,7 @@ export class AppComponent {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(PostDialogComponent, {
-      width: '400px',
+      width: '445px', height: '445px',
       data: { nome: '', email: '', titulo: '', subtitulo: '', mensagem: '' }
     });
 
