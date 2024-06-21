@@ -38,8 +38,14 @@ export class AppComponent {
   title = 'app';
   public posts: Post[];
 
-  constructor(public dialog: MatDialog,
+  constructor(
+    public dialog: MatDialog,
     public postService: PostService) {}
+
+    ngOnInit() {
+      this.posts = this.postService.posts;
+
+    }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(PostDialogComponent, {
