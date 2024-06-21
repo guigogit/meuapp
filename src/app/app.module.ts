@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { PostModule } from './post/post.module';
+import { PostService } from './post.service';
 
 @NgModule({
   imports: [
@@ -39,7 +40,9 @@ import { PostModule } from './post/post.module';
     MatFormFieldModule,
     PostModule  // Importe o módulo que exporta PostDialogComponent e PostComponent
   ],
-  providers: [],
+  providers: [
+    PostService
+  ],
   bootstrap: []
 })
 export class AppModule { }

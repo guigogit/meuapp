@@ -13,6 +13,7 @@ import { MatCardTitle } from '@angular/material/card';
 import { MatCardSubtitle } from '@angular/material/card';
 import { MatCardContent } from '@angular/material/card';
 import { MatCardActions } from '@angular/material/card';
+import { PostService } from './post.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -35,15 +36,10 @@ import { MatCardActions } from '@angular/material/card';
 })
 export class AppComponent {
   title = 'app';
-  public posts: Post[] = [
-    new Post("João", "Meu post", "Sub Meu", "joao@gmail.com", "Minha MSG"),
-    new Post("Paulo", "Post do Paulo", "Sub Paulo", "paulo@gmail.com", "MSG do Paulo"),
-    new Post("Maria", "Post da Maria", "Sub Maria", "Maria@gmail.com", "MSG da Maria"),
-    new Post("Rodrigo", "Post do Rodrigo", "Sub Rodrigo", "Rodrigo@gmail.com", "MSG do Rodrigo"),
-    new Post("Mirly", "Post da Mirly", "Sub Mirly", "Mirly@gmail.com", "MSG da Mirly"),
-  ];
+  public posts: Post[];
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog,
+    public postService: PostService) {}
 
   openDialog(): void {
     const dialogRef = this.dialog.open(PostDialogComponent, {
