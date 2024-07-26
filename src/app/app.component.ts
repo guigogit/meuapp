@@ -47,7 +47,7 @@ export class AppComponent {
 
     }
 
-  openDialog(): void {
+  openDialog() {
     const dialogRef = this.dialog.open(PostDialogComponent, {
       width: '445px', height: '445px',
       data: { nome: '', email: '', titulo: '', subtitulo: '', mensagem: '' }
@@ -57,9 +57,15 @@ export class AppComponent {
       //console.log('O diálogo foi fechado');
       // Processar o resultado aqui, se necessário
       if (result) {
-        console.log(result);
+        this.postService.salvar(result.post, result.arquivo);
       }
 
     });
+  }
+  salvarPost() {
+    const post = new Post('Nome', 'Título', 'Subtítulo', 'email@example.com', 'Mensagem', '', 0, 0);
+    const file = new File(['conteúdo do arquivo'], 'arquivo.txt', { type: 'text/plain' });
+
+    this.postService.salvar(post, file);
   }
 }

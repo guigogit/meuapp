@@ -15,12 +15,13 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { AppComponent } from './app.component'; // Importe o AppComponent
 import { PostModule } from './post/post.module';
 import { PostService } from './post.service';
 
 @NgModule({
   imports: [
+    AppComponent,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -40,6 +41,7 @@ import { PostService } from './post.service';
     MatFormFieldModule,
     PostModule  // Importe o módulo que exporta PostDialogComponent e PostComponent
   ],
+
   providers: [
     PostService
   ],
