@@ -6,6 +6,16 @@ import { Post } from '../post';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
-export class PostComponent {
+export class PostComponent  {
   @Input() post!: Post;
+  postService: any;
+
+  ngOnInit() {
+
+  }
+
+  like(){
+    this.postService.like(this.post.id);
+  }
 }
+

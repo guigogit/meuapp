@@ -1,4 +1,5 @@
 export class Post {
+imagemNome: any;
   constructor(
       public nome: string,
       public titulo: string,
