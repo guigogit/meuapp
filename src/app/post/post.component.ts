@@ -7,6 +7,9 @@ import { Post } from '../post';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent  {
+asset(arg0: any) {
+throw new Error('Method not implemented.');
+}
   @Input() post!: Post;
   postService: any;
 
