@@ -8,7 +8,7 @@ imagemNome: any;
       public mensagem: string,
       public arquivo?: string,
       public id?: number,
-      public likes?: number
+      public likes: number = 0
   ) {}
 }
 

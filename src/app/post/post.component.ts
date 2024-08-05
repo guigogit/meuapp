@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Post } from '../post';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-post',
@@ -7,18 +8,16 @@ import { Post } from '../post';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent  {
+above: any;
 asset(arg0: any) {
 throw new Error('Method not implemented.');
 }
   @Input() post!: Post;
-  postService: any;
+  constructor(private postService: PostService) {}
 
-  ngOnInit() {
-
-  }
-
-  like(){
-    this.postService.like(this.post.id);
+  like() {
+    if (this.post && this.post.id) {
+      this.postService.like(this.post.id);
+    }
   }
 }
-
