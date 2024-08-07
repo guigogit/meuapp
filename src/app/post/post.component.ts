@@ -2,7 +2,8 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { Post } from '../post';
 import { PostService } from '../post.service';
 import { ChangeDetectorRef } from '@angular/core';
-
+import {MatButtonModule} from '@angular/material/button';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @Component({
   selector: 'app-post',

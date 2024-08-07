@@ -36,3 +36,10 @@ import { MatIconModule } from '@angular/material/icon';
   ]
 })
 export class PostModule { }
+export class BadgeOverviewExample {
+  hidden = false;
+
+  toggleBadgeVisibility() {
+    this.hidden = !this.hidden;
+  }
+}

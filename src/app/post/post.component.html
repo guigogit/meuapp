@@ -56,9 +56,10 @@
     <button mat-button color="primary" (click)="like()">LIKE</button>
     <button mat-button>SHARE</button>
     <!-- Ícone com badge de quantidade de likes -->
-    <div matBadge="{{ post.likes }}" matBadgeColor="warn" matBadgeOverlap="false" class="demo-section">
-      <mat-icon color="warn"   style="color: red;">favorite</mat-icon>
-    </div>
+      <div matBadge="{{post.likes}}" matBadgeColor="warn" matBadgeOverlap="false" class="cdk-visually-hidden" style="color: red;" >
+        <mat-icon color="warn"   style="color: red;">favorite</mat-icon>
+      </div>
+
 
   </mat-card-actions>
 </mat-card>
