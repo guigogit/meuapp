@@ -46,16 +46,20 @@
     <mat-card-subtitle>{{ post.subtitulo }}</mat-card-subtitle>
   </mat-card-header>
 
-
   <img *ngIf="post.arquivo" mat-card-image [src]="'http://localhost:8000/storage/' + post.arquivo" alt="{{ post.titulo }}">
 
   <mat-card-content>
     <p>{{ post.mensagem }}</p>
   </mat-card-content>
+
   <mat-card-actions>
-    <button mat-button color = "primary" (click)="like()">LIKE</button>
+    <button mat-button color="primary" (click)="like()">LIKE</button>
     <button mat-button>SHARE</button>
-    <mat-icon color = "warn" *ngIf="post.likes> 0" matBadge = "post.likes" matBadgePosition = "above after">favorite</mat-icon>
+    <!-- Ícone com badge de quantidade de likes -->
+    <div matBadge="{{ post.likes }}" matBadgeColor="warn" matBadgeOverlap="false" class="demo-section">
+      <mat-icon color="warn"   style="color: red;">favorite</mat-icon>
+    </div>
 
   </mat-card-actions>
 </mat-card>
+

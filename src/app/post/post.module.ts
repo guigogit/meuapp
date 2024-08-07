@@ -9,6 +9,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card'; // Importar MatCardModule
 import { FormsModule } from '@angular/forms';
 import { MatIcon } from '@angular/material/icon';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,9 @@ import { MatIcon } from '@angular/material/icon';
     MatInputModule,
     MatFormFieldModule,
     MatCardModule, // Importar MatCardModule
-    FormsModule
+    FormsModule,
+    MatBadgeModule,
+    MatIconModule
   ],
   exports: [
     PostDialogComponent,

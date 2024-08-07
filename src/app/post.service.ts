@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpEventType, HttpEvent } from '@angular/common/http';
 import { Post } from './post';
 
+
 @Injectable()
 export class PostService {
 
