@@ -30,5 +30,10 @@ throw new Error('Method not implemented.');
       this.postService.like(this.post.id);
     }
   }
+  apagar() {
+    this.postService.apagar(this.post.id ?? 0);
+
+  }
+
 
 }
